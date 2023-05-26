@@ -1,0 +1,123 @@
+@import url('../../index.css');
+
+@media (min-width: 768px) {
+
+    .logoHeader {
+        background: linear-gradient(180deg, #FCD660 0%, rgba(237, 179, 182, 0) 100%, rgba(237, 179, 182, 0) 100%);
+        height: 100vh;
+        z-index: 0;
+
+    }
+
+    .hiddenContent {
+        opacity: 1;
+        position: absolute;
+        visibility: visible;
+
+    }
+
+    .container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .container img:nth-child(1) {
+        position: absolute;
+        width: 10%;
+        top: 40%;
+        left: 40%;
+    }
+
+    @keyframes slideOut1 {
+        0% {
+            top: 40%;
+            left: 40%;
+        }
+
+        25% {
+            top: 35%;
+            left: 35%;
+        }
+
+        50% {
+            top: 30%;
+            left: 30%;
+        }
+
+        75% {
+            top: 25%;
+            left: 25%;
+        }
+
+        100% {
+            top: 20%;
+            left: 20%;
+        }
+    }
+
+    .slide-out1 {
+        animation: slideOut1 2s ease-in-out forwards;
+    }
+
+    @keyframes slideOut2 {
+        0% {
+            top: 50%;
+            left: 45%;
+        }
+
+        25% {
+            top: 55%;
+            left: 50%;
+        }
+
+        50% {
+            top: 60%;
+            left: 55%;
+        }
+
+        75% {
+            top: 65%;
+            left: 60%;
+        }
+
+        100% {
+            top: 70%;
+            left: 65%;
+        }
+    }
+
+    .slide-out2 {
+        animation: slideOut2 2s ease-in-out forwards;
+    }
+
+    .container img:nth-child(2) {
+        position: absolute;
+        width: 10%;
+        top: 50%;
+        left: 45%;
+        transform: rotate(180deg);
+    }
+
+    .hiddenContent {
+        width: 20%;
+        padding: 16px;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 30%;
+        left: 35%;
+
+    }
+
+    .work-btn {
+        width: 60%;
+        height: 20px;
+    }
+
+    .hiddenContent p {
+        text-align: center;
+    }
+}

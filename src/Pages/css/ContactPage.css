@@ -1,0 +1,73 @@
+
+
+
+
+@media (min-width: 768px) {
+
+    
+.header{
+    width: 100vw;
+    height: 100vh;
+    background-color: #D9d9d9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+
+
+}
+.heading{
+    width: 30%;
+    
+}
+.heading h3{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color: #1d2939;
+
+}
+.heading p{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #1d2939;
+}
+.contactInfo{
+    width: 25em;
+    height: 20em;
+    background-color: #fcd660;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 22px 0px;
+    gap: 1em;
+    padding: 2em;
+}
+.contactInfo h4{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    margin: 0;
+}
+.contactInfo p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+.infoRows{
+    display: flex;
+    flex-direction: row;
+
+}
+.infoRows p{
+    margin: 0.5em;
+}
+
+}
