@@ -1,3 +1,32 @@
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('./utils/NeueMontrealRegular400.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Unbounded';
+  src: url('./utils/Unbounded/static/Unbounded-Regular.ttf') format('opentype')
+}
+:root{
+  --headingSize : 32px;
+  --paragraph: 16px;
+  --fontHeading: 'Unbounded';
+  --fontParagraph: 'NeueMontreal';
+  --btnFont: 'NeueMontreal';
+  --btnSize: 20px;
+  --btnColor: #FCD660;
+  --MobileBtn: 14px;
+  --MobileHeading: 20px;
+  --MobilePara: 14px;
+  --MobileH2: 16px;
+  --colorBackground: #D9D9D9;
+  --colorPrimery: #FCD660;
+  --colorAccent: #EDB3B6;
+  --colorSecondary: #E4D9EA;
+  --whiteCol: #fff;
+  --blackCol: #000;
+
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +34,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
