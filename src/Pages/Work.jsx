@@ -11,9 +11,6 @@ import './css/WorkPage.css'
 
 
 const Work = () => {
-    
-
-    console.log(projects);
 
     const ProjectGallery = () => {
         const navigate = useNavigate();

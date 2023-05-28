@@ -1,4 +1,6 @@
-import tonkinVideo from './Tonkin.mov';
+
+
+let tonkinVideo;
 
 export const logo = 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/Logo-version1.png?alt=media&token=990e9459-a637-46cc-9f40-034ca0bea23a';
 export const video = 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/D%26D_VIDEO%20MAIN%20FINAL%20(1).mp4?alt=media&token=ff5fe6df-01d3-4037-b0fb-046925e2f37f';
@@ -73,8 +75,8 @@ export const work = [
 export let idArr = ['Skøonnere', 'MassageTerapi', 'Graphite', 'DistrictTonkin', 'VisitKøge', 'SmartPosters', 'GreenLead', 'PimpMyMeat'];
 
 
-export const projects = {
-    skonnere: {
+export const projects = [
+    {
         projectName: 'Skøonnere',
         headerImg: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FSkonnere%2Fskonnere-logo-on-background.png?alt=media&token=2b871d98-993b-4c22-a8f1-4aa68d9b2c6c',
         aboutText: `Skønnere is an online shop selling skin care products. The owner of the webshop wanted a new visual identity, including a new colour palette, a new logo and printing materials, also mock-ups for the website.`,
@@ -97,7 +99,7 @@ export const projects = {
         ],
         serviceType: 'Brand',
     },
-    massageTerapy: {
+    {
         projectName: 'MassageTerapi',
         headerImg: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FMassageTerapi%2Fmassageterapi-logo-on-background.png?alt=media&token=e724e6bf-f9f7-43a2-864f-408fcfb7dd54',
         aboutText: `Massage terapi is a massage shop, whose owner wanted to refresh its visual identity. Therefore, the aim of the project was to come up with a new idea for the logo, a new colour palette and a typography style.`,
@@ -119,7 +121,7 @@ export const projects = {
         ],
         serviceType: 'Brand',
     },
-    graphite: {
+    {
         projectName: 'Graphite',
         headerImg: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FGraphite%2Fgraphite-logo-on-background-2.png?alt=media&token=fe6e75df-8fa5-46ad-9f9e-30467d4c05f9',
         aboutText: `Graphite agency is a project which implies the work of a group of students, with the goal of solving the design, marketing and coding problems of real clients. Our task within this project was to reflect the agency's personality through a new brand identity.`,
@@ -144,7 +146,7 @@ export const projects = {
         ],
         serviceType: 'Brand',
     },
-    districtTonkin: {
+    {
         projectName: 'DistrictTonkin',
         typeOfProject: 'Design Menual',
         headerImg: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FDistrictTonkin%2Fdistrict-tonkin-stickers.jpg?alt=media&token=06f1efbe-3eba-476e-95ce-9f97aa470240',
@@ -153,7 +155,7 @@ export const projects = {
             'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FDistrictTonkin%2F2dsaf.jpg?alt=media&token=4a77b4b0-fcbf-4134-8fd1-aade3d66c571',
             'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FDistrictTonkin%2FTakeaway_mockup.jpg?alt=media&token=34245919-a136-4942-a223-945e08df2170',
             'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FDistrictTonkin%2Fdistrict-tonkin-stickers.jpg?alt=media&token=06f1efbe-3eba-476e-95ce-9f97aa470240',
-            
+
         ],
         videoUrl: tonkinVideo,
         keyFocus: 'The aim of the project was to improve visual identity, function and user experience (UX) and SEO on the current website, as well as the SoMe representation, based on the District Tonkin case.',
@@ -171,7 +173,8 @@ export const projects = {
         ],
         serviceType: 'Brand',
     },
-    visitKoge: {
+
+    {
         projectName: 'VisitKøge',
         headerImg: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FVisitKoge%2F9.jpg?alt=media&token=b229d620-bf4b-48e0-869c-6ae8d4e4c36d',
         aboutText: `This project has been developed in collaboration with Connect Køge, which works to strengthen business development and tourism in the Køge area. Our mission was to discover how can they make relevant information easily accessible to tourists, by digitizing the services currently offered. In addition, we had to take into consideration the fact that the target group must be expanded so that a younger group of tourists is also attracted to the place.`,
@@ -182,21 +185,12 @@ export const projects = {
         ],
         keyFocus: 'We came up with the following digital solution, to create an interactive map for non-danish and danish speaking tourists that are coming to Køge. The map can be accessed by scanning a QR code which will be found on posters, and banners placed in the city center. Once the tourists open the map, they will have two options, to choose between a usual Køge ́s map and a personalized map. Both options provide a map with the list of attractions people can visit in Køge and the necessary information about them.',
         galleryImgs: [
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
+           
         ],
-        videoUrl:tonkinVideo ,
+        videoUrl: tonkinVideo,
         serviceType: 'Brand',
     },
-    smartPosters: {
+    {
         projectName: 'SmartPosters',
         headerImg: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FSmartPoster%2Flogo-mockup.jpg?alt=media&token=3a0c0a30-7616-4ede-866e-e50ec897a6d9',
         aboutText: `Smart Poster is a new kind of poster that offers a unique experience to its customers. The exclusiveness of Danish expressions and idioms inspired us to design not just another white canvas with text. We combined our skills, ideas, and objectives and developed smart posters. Particularly, the smart feature is the QR code at the bottom of each of the posters which helps the customers to understand easily and fast the meaning of the expressions.`,
@@ -204,7 +198,7 @@ export const projects = {
             'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FSmartPoster%2Fpaper-tube-mockup.jpg?alt=media&token=0c27e5da-2f4f-445e-bbff-142d74398684',
             'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FSmartPoster%2FHands_holding_a_poster_mockup.jpg?alt=media&token=c471efed-44db-4e43-b9b0-0ae6bb402efe',
             'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FSmartPoster%2Flogo-mockup.jpg?alt=media&token=3a0c0a30-7616-4ede-866e-e50ec897a6d9',
-           
+
         ],
         videoUrl: {
             img1: tonkinVideo,
@@ -227,8 +221,9 @@ export const projects = {
             'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FSmartPoster%2Fpaper-tube-mockup.jpg?alt=media&token=0c27e5da-2f4f-445e-bbff-142d74398684',
         ],
         serviceType: 'Brand',
-    },
-    greenLead: {
+
+    }, 
+    {
         projectName: 'GreenLead',
         headerImg: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FGreenLead%2Fgreenlead_businesscard.jpg?alt=media&token=69f35a95-26b9-4bdf-9faf-212fcfcf1292',
         aboutText: `Graphite agency is a project which implies the work of a group of students, with the goal of solving the design, marketing and coding problems of real clients. Our task within this project was to reflect the agency's personality through a new brand identity.`,
@@ -241,20 +236,12 @@ export const projects = {
         videoUrl: tonkinVideo,
         keyFocus: ' Sustainable Website Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
         galleryImgs: [
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
+            'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FGreenLead%2FFalling_bussiness_cards_mockup.png?alt=media&token=69f4852c-3af0-40b9-8871-d3a2dc0aff97',
+            'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FGreenLead%2FFalling_bussiness_cards_mockup.png?alt=media&token=69f4852c-3af0-40b9-8871-d3a2dc0aff97',
         ],
         serviceType: 'Brand',
     },
-    pimpMyMeat: {
+    {
         projectName: 'PimpMyMeat',
         headerImg: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FGraphite%2Fgraphite-logo-on-background-2.png?alt=media&token=fe6e75df-8fa5-46ad-9f9e-30467d4c05f9',
         aboutText: `Graphite agency is a project which implies the work of a group of students, with the goal of solving the design, marketing and coding problems of real clients. Our task within this project was to reflect the agency's personality through a new brand identity.`,
@@ -266,17 +253,11 @@ export const projects = {
         ],
         keyFocus: 'Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
         galleryImgs: [
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
-            '',
+            'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FGreenLead%2FFalling_bussiness_cards_mockup.png?alt=media&token=69f4852c-3af0-40b9-8871-d3a2dc0aff97',
+            'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FGreenLead%2FFalling_bussiness_cards_mockup.png?alt=media&token=69f4852c-3af0-40b9-8871-d3a2dc0aff97',
+            
         ],
         serviceType: 'Brand',
-    },
-}
+
+    }
+]

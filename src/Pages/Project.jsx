@@ -1,124 +1,181 @@
-import React  from 'react'
-import { useParams, useNavigate  } from "react-router-dom";
+import React from 'react'
+import { useParams, useNavigate } from "react-router-dom";
 import { idArr, projects } from '../utils/constants'
 import './css/Project.css';
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 
-const Project = (props) => {
+const Project = () => {
+    // id is projectName in the object array
+    const smallGalleryRef = useRef(null);
     const { id } = useParams();
-    let matchFound = false;
-    let curProj;
+    const [curProj, setCurProject ]= useState(null);
+    const [ random , setRandom ] = useState(1)
 
-    const [imgCount, setImgCount] = useState(0);
+    const [hasScrolled, setHasScrolled] = useState(false);
+
+
+    const handleScroll = () => {
+      if (smallGalleryRef.current) {
+        const rect = smallGalleryRef.current.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+    
+        if (isVisible && !hasScrolled) {
+          setHasScrolled(true)
+          smallGalleryRef.current.classList.add('scrolled')
+          // Execute the desired action when the section is visible
+          console.log('smallGallery section is visible');
+          // Add your logic here
+        }else if(!isVisible && hasScrolled){
+          setHasScrolled(false)
+          smallGalleryRef.current.classList.remove('scrolled')
+        }
+      }
+    };
+    useEffect(() => {
+      const scrollListener = () => {
+        handleScroll();
+      };
+    
+      window.addEventListener('scroll', scrollListener);
+    
+      return () => {
+        window.removeEventListener('scroll', scrollListener);
+      };
+    }, []);
     
 
-    if (id === idArr[0]) {
-        curProj = projects.skonnere;
-    } else if (id === idArr[1]) {
-        curProj = projects.massageTerapy;
-    } else if (id === idArr[2]) {
-        curProj = projects.graphite;
-    } else if (id === idArr[3]) {
-        curProj = projects.districtTonkin;
-    } else if (id === idArr[4]) {
-        curProj = projects.visitKoge;
-    } else if (id === idArr[5]) {
-        curProj = projects.smartPosters;
-    } else if (id === idArr[6]) {
-        curProj = projects.greenLead;
-    } else if (id === idArr[7]) {
-        curProj = projects.pimpMyMeat;
-    }
-    idArr.forEach(x => {
-        if (x === id) {
-            matchFound = true;
+    useEffect(() => {
+        const foundProject = findProjectByProjectName(id);
+       if (foundProject) {
+            setCurProject(foundProject);
+        } else {
+        console.log('Project not found.');
         }
-    })
-    if (!matchFound) {
-        throw new Error('Sorry, wrong link');
+    }, [id])
+
+    function findProjectByProjectName(id){ 
+        return projects.find(project => project.projectName === id);
     }
-    const videoHandler = () => {
-        if (curProj.videoUrl) {
-            return true;
-        }
-    }
+    
+    const [imgCount, setImgCount] = useState(0);
+
     const changePicture = () => {
-        let nextImgCount = (imgCount + 1) ;
-         if(curProj.galleryImgs.length < imgCount){
+        let circleArr = document.querySelectorAll('.circleFill')
+        let length = curProj.galleryImgs.length
+
+
+        let nextImgCount = (imgCount + 1);
+        if (length < imgCount) {
             nextImgCount = 0;
-         }
-         console.log('hi');
-         console.log(nextImgCount);
+            setImgCount(0)
+        }
+        if(nextImgCount >= length){
+            nextImgCount = 0;
+        }
+        if(circleArr){
+            circleArr[imgCount].classList.remove('fill')
+            circleArr[nextImgCount].classList.add('fill')
+        }
+        if(imgCount > length || imgCount > 1){
+            setRandom(getRandomNumber(1,7))
+        }
+        setImgCount(nextImgCount)
+
+    }
+    
+    const changePictureToLeft = () => {
+        let circleArr = document.querySelectorAll('.circleFill')
+        let nextImgCount = (imgCount - 1);
+        let length = curProj.galleryImgs.length
+
+        if (0 > imgCount) {
+            nextImgCount =length;
+        }
+        if(nextImgCount <0){
+            nextImgCount = length - 1
+        }
+        if(circleArr){
+            circleArr[imgCount].classList.remove('fill')
+            circleArr[nextImgCount].classList.add('fill')
+        }
+        if(imgCount > length || imgCount > 1 ){
+             setRandom(getRandomNumber(1,7))
+        }
+     
+
         setImgCount(nextImgCount);
     }
-    const changePictureToLeft = () =>{
-        let nextImgCount = (imgCount - 1) ;
-         if(0 > imgCount){
-            nextImgCount = curProj.galleryImgs.length;
-         }
-         console.log('hi');
-         console.log(nextImgCount);
-        setImgCount(nextImgCount);
+
+    function getRandomNumber(start, end){
+        let min = Math.ceil(start);
+        const max = Math.floor(end);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-    videoHandler();
-    const navigate = useNavigate();
-    let goToNext = () => {
-        navigate('/Project/DistrictTonkin');
+    // videoHandler();
+    if(!curProj) {
+        return <div>Loading</div>
     }
+  
     return (
-        <div>
-            <h1>{curProj.projectName}</h1>
-            <img src={curProj.headerImg} alt={curProj.projectName} />
-            <div className="aboutTheProject">
-                <div className="boxContainer">
-                    <div className="square"></div>
-                    <div className="outsideSquare"></div>
-                    <h1>About the project</h1>
-                </div>
-                <div className="description">{curProj.aboutText}</div>
-                {videoHandler() ? <div><video src={curProj.videoUrl}></video></div> : null}
-                <div className="smallGallery">
-                    <img src={curProj.firstThreePics[0]} alt="firstThreePics" />
-                    <img src={curProj.firstThreePics[2]} alt="firstThreePics" />
-                    <img src={curProj.firstThreePics[2]} alt="firstThreePics" />
-                </div>
-                <div className="keyContainer">
+       
+            <div>
+                <div>
+                  <div className='projectsThemeContainer'>
+                    <h1>{curProj.projectName}</h1>
+                  </div>
+                  <img className='headImgInProject' src={curProj.headerImg} alt={curProj.projectName} />
+                  <div className="aboutTheProject">
                     <div className="boxContainer">
-                        <div className="square"></div>
-                        <div className="outsideSquare"></div>
-                        <h1>Key focus</h1>
+                      <div className="square"></div>
+                      <div className="outsideSquare"></div>
+                      <h1>About the project</h1>
                     </div>
-                    <p>{curProj.keyFocus}</p>
-                </div>
-                <div className="bigGalleryContainer">
+                    <div className="description">{curProj.aboutText}</div>
+                  </div>
+                  <div className="smallGallery" ref={smallGalleryRef}>
+                    <img src={curProj.firstThreePics[0]} alt="firstThreePics" />
+                    <img src={curProj.firstThreePics[1]} alt="firstThreePics" />
+                    <img src={curProj.firstThreePics[2]} alt="firstThreePics" />
+                  </div>
+                  <div className="aboutTheProject">
+                    <div className="boxContainer">
+                      <div className="square"></div>
+                      <div className="outsideSquare"></div>
+                      <h1>Key focus</h1>
+                    </div>
+                    <p className='description'>{curProj.keyFocus}</p>
+                  </div>
+                  <div className="bigGalleryContainer">
                     <h1>{curProj.typeOfProject}</h1>
                     <div className="gallery">
-                        <img src={curProj.galleryImgs[imgCount]} alt="gallery" />
+                      <img src={curProj.galleryImgs[imgCount]} alt="gallery" />
+                      <div className="circleContainer">
                         {curProj.galleryImgs.map((x, index) => (
-                            <div className='circle circleFull' key={index}></div>
+                          <div className='circle' key={index}>
+                            <div className='circleFill' ></div>
+                          </div>
                         ))}
-                        <div className="btnsForGallery">
-                            <div onClick={changePictureToLeft} className="leftBtn"></div>
-                            <div onClick={changePicture} className="rightBtn">
-
-                            </div>
-                        </div>
+                      </div>
+                      <div className="btnsForGallery">
+                        <div onClick={changePictureToLeft} className="leftBtn"></div>
+                        <div onClick={changePicture} className="rightBtn"></div>
+                      </div>
                     </div>
+                  </div>
+                  <div className="interested">
+                    <h1>You might be interested</h1>
+                    <div className="containerForProjects">
+                      <div className="projectNext">
+                        <img src={projects[random].headerImg} alt="nextProjImg" />
+                        <h1>{projects[random].projectName}</h1>
+                        <p>{projects[random].typeOfProject}</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </div>
-            <div className="interested">
-                <h1>You might be interested</h1>
-                <div className="containerForProjects" onClick={goToNext}>
-                    <div className="projectNext">
-                        <img src={projects.districtTonkin.headerImg} alt="nextProjImg" />
-                        <h1>{projects.districtTonkin.projectName}</h1>
-                        <p>{projects.districtTonkin.typeOfProject}</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    )
+          );
+    
 }
 export default Project
