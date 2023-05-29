@@ -1,5 +1,6 @@
 import { Stack } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
+import { useEffect } from 'react'
 import { logo } from '../utils/constants';
 import './style.css'
 
@@ -40,18 +41,32 @@ const Navbar = () => {
         menuContainer.style.display = 'none';
       }
     }
-
-
-
   }
+  useEffect(() => {
+    const checkURL = () => {
+      const isWorkPage = window.location.pathname.includes('Work');
+      const logoLink = document.getElementById('logo-link');
+      const mainNav = document.getElementsByClassName('main-nav')[0];
+      console.log(isWorkPage);
+      if (isWorkPage && logoLink) {
+        console.log(logoLink.src)
+        mainNav.style.background = 'transparent';
+        mainNav.style.position = 'absolute'
+        logoLink.src = 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/dark-logo-simple-version.png?alt=media&token=7724bab6-64ab-4276-a510-b7caa062be9e'; // Replace 'your-new-url' with the desired URL for the logo link on the Work page
+      }else{
+        logoLink.src = 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/Logo-version1.png?alt=media&token=990e9459-a637-46cc-9f40-034ca0bea23a'
+      }
+    };
 
+    checkURL();
+  }, []);
   return (
     <Stack
       className="main-nav"
       direction="row"
     >
       <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-        <img className="logo" src={logo} alt="logo" height={55} />
+        <img id="logo-link" className="logo" src={logo} alt="logo" height={55} />
       </Link>
       <div className="burgerContainer" onClick={openBurgerMenu}>
         <div className="burger-line "></div>

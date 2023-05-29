@@ -3,17 +3,18 @@ import { useParams, useNavigate } from "react-router-dom";
 import { idArr, projects } from '../utils/constants'
 import './css/Project.css';
 import { useState, useEffect, useRef } from "react";
-
+import { Swipeable } from 'react-swipeable';
 
 const Project = () => {
-    // id is projectName in the object array
-    const smallGalleryRef = useRef(null);
-    const { id } = useParams();
-    const [curProj, setCurProject ]= useState(null);
-    const [ random , setRandom ] = useState(1)
+    const smallGalleryRef = useRef(null); // take ref for element from dom 
+    const { id } = useParams(); // getting the id from Url!
+    const [curProj, setCurProject ]= useState(null);  // useState for current project 
+    const [ random , setRandom ] = useState(1)  // State we need to change it when user interact! 
+    const [hasScrolled, setHasScrolled] = useState(false); // random is random number for printing projects 
+    //has sscrolled is to catch scroll event and run function !! 
+    const [imgCount, setImgCount] = useState(0);
 
-    const [hasScrolled, setHasScrolled] = useState(false);
-
+  
 
     const handleScroll = () => {
       if (smallGalleryRef.current) {
@@ -58,7 +59,6 @@ const Project = () => {
         return projects.find(project => project.projectName === id);
     }
     
-    const [imgCount, setImgCount] = useState(0);
 
     const changePicture = () => {
         let circleArr = document.querySelectorAll('.circleFill')
@@ -116,6 +116,7 @@ const Project = () => {
     if(!curProj) {
         return <div>Loading</div>
     }
+    let random1 = random+1
   
     return (
        
@@ -131,7 +132,7 @@ const Project = () => {
                       <div className="outsideSquare"></div>
                       <h1>About the project</h1>
                     </div>
-                    <div className="description">{curProj.aboutText}</div>
+                    <div className="descriptionInProject">{curProj.aboutText}</div>
                   </div>
                   <div className="smallGallery" ref={smallGalleryRef}>
                     <img src={curProj.firstThreePics[0]} alt="firstThreePics" />
@@ -144,12 +145,16 @@ const Project = () => {
                       <div className="outsideSquare"></div>
                       <h1>Key focus</h1>
                     </div>
-                    <p className='description'>{curProj.keyFocus}</p>
+                    <p className='descriptionInProject'>{curProj.keyFocus}</p>
                   </div>
                   <div className="bigGalleryContainer">
                     <h1>{curProj.typeOfProject}</h1>
                     <div className="gallery">
                       <img src={curProj.galleryImgs[imgCount]} alt="gallery" />
+                      <div className="btnsForGallery">
+                        <div onClick={changePictureToLeft} className="leftBtn"></div>
+                        <div onClick={changePicture} className="rightBtn"></div>
+                      </div>
                       <div className="circleContainer">
                         {curProj.galleryImgs.map((x, index) => (
                           <div className='circle' key={index}>
@@ -157,10 +162,7 @@ const Project = () => {
                           </div>
                         ))}
                       </div>
-                      <div className="btnsForGallery">
-                        <div onClick={changePictureToLeft} className="leftBtn"></div>
-                        <div onClick={changePicture} className="rightBtn"></div>
-                      </div>
+                      
                     </div>
                   </div>
                   <div className="interested">
@@ -170,6 +172,12 @@ const Project = () => {
                         <img src={projects[random].headerImg} alt="nextProjImg" />
                         <h1>{projects[random].projectName}</h1>
                         <p>{projects[random].typeOfProject}</p>
+                      </div>
+                      <div className="projectNext">
+                        
+                        <img src={projects[random1].headerImg} alt="nextProjImg" />
+                        <h1>{projects[random1].projectName}</h1>
+                        <p>{projects[random1].typeOfProject}</p>
                       </div>
                     </div>
                   </div>

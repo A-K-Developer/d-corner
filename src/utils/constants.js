@@ -69,7 +69,7 @@ export const work = [
     "Now, it's time to take a look at some of our work!",
 
 ]
-
+export const imgForService = ['https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/img3.jpg?alt=media&token=d02a7c86-6b9d-42a2-a810-223786e307b0']
 //Projects
 
 export let idArr = ['Skøonnere', 'MassageTerapi', 'Graphite', 'DistrictTonkin', 'VisitKøge', 'SmartPosters', 'GreenLead', 'PimpMyMeat'];
@@ -78,6 +78,7 @@ export let idArr = ['Skøonnere', 'MassageTerapi', 'Graphite', 'DistrictTonkin',
 export const projects = [
     {
         projectName: 'Skøonnere',
+        typeOfProject: 'Brand',
         headerImg: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FSkonnere%2Fskonnere-logo-on-background.png?alt=media&token=2b871d98-993b-4c22-a8f1-4aa68d9b2c6c',
         aboutText: `Skønnere is an online shop selling skin care products. The owner of the webshop wanted a new visual identity, including a new colour palette, a new logo and printing materials, also mock-ups for the website.`,
         firstThreePics: [
@@ -101,6 +102,8 @@ export const projects = [
     },
     {
         projectName: 'MassageTerapi',
+        typeOfProject: 'Brand',
+
         headerImg: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FMassageTerapi%2Fmassageterapi-logo-on-background.png?alt=media&token=e724e6bf-f9f7-43a2-864f-408fcfb7dd54',
         aboutText: `Massage terapi is a massage shop, whose owner wanted to refresh its visual identity. Therefore, the aim of the project was to come up with a new idea for the logo, a new colour palette and a typography style.`,
         firstThreePics: [
@@ -123,6 +126,8 @@ export const projects = [
     },
     {
         projectName: 'Graphite',
+        typeOfProject: 'Brand',
+
         headerImg: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FGraphite%2Fgraphite-logo-on-background-2.png?alt=media&token=fe6e75df-8fa5-46ad-9f9e-30467d4c05f9',
         aboutText: `Graphite agency is a project which implies the work of a group of students, with the goal of solving the design, marketing and coding problems of real clients. Our task within this project was to reflect the agency's personality through a new brand identity.`,
         firstThreePics: [
@@ -176,6 +181,8 @@ export const projects = [
 
     {
         projectName: 'VisitKøge',
+        typeOfProject: 'Brand',
+
         headerImg: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FVisitKoge%2F9.jpg?alt=media&token=b229d620-bf4b-48e0-869c-6ae8d4e4c36d',
         aboutText: `This project has been developed in collaboration with Connect Køge, which works to strengthen business development and tourism in the Køge area. Our mission was to discover how can they make relevant information easily accessible to tourists, by digitizing the services currently offered. In addition, we had to take into consideration the fact that the target group must be expanded so that a younger group of tourists is also attracted to the place.`,
         firstThreePics: [
@@ -192,6 +199,8 @@ export const projects = [
     },
     {
         projectName: 'SmartPosters',
+        typeOfProject: 'Brand',
+
         headerImg: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FSmartPoster%2Flogo-mockup.jpg?alt=media&token=3a0c0a30-7616-4ede-866e-e50ec897a6d9',
         aboutText: `Smart Poster is a new kind of poster that offers a unique experience to its customers. The exclusiveness of Danish expressions and idioms inspired us to design not just another white canvas with text. We combined our skills, ideas, and objectives and developed smart posters. Particularly, the smart feature is the QR code at the bottom of each of the posters which helps the customers to understand easily and fast the meaning of the expressions.`,
         firstThreePics: [
@@ -225,6 +234,8 @@ export const projects = [
     }, 
     {
         projectName: 'GreenLead',
+        typeOfProject: 'Brand',
+
         headerImg: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FGreenLead%2Fgreenlead_businesscard.jpg?alt=media&token=69f35a95-26b9-4bdf-9faf-212fcfcf1292',
         aboutText: `Graphite agency is a project which implies the work of a group of students, with the goal of solving the design, marketing and coding problems of real clients. Our task within this project was to reflect the agency's personality through a new brand identity.`,
         firstThreePics: [
@@ -243,6 +254,8 @@ export const projects = [
     },
     {
         projectName: 'PimpMyMeat',
+        typeOfProject: 'Brand',
+
         headerImg: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FGraphite%2Fgraphite-logo-on-background-2.png?alt=media&token=fe6e75df-8fa5-46ad-9f9e-30467d4c05f9',
         aboutText: `Graphite agency is a project which implies the work of a group of students, with the goal of solving the design, marketing and coding problems of real clients. Our task within this project was to reflect the agency's personality through a new brand identity.`,
         firstThreePics: [

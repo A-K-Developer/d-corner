@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Box } from '@mui/material';
-import { Navbar , Footer} from "./components/index";
+import { Navbar , Footer, ScrollToTop} from "./components/index";
 import {HomePage, Work, Service, AboutUs, Contact, Project} from './Pages/indexPages'
 import './components/style.css';
 
@@ -10,8 +10,9 @@ function App() {
     <BrowserRouter>
       <Box>
         <Navbar />
+        <ScrollToTop />
         <Routes>
-          <Route exact path='/' element={<HomePage />} />
+          <Route exact path='/' element={<HomePage /> } />
           <Route path="/Work" element={<Work />} />
           <Route path="/Service" element={<Service />} />
           <Route path="/About-Us" element={<AboutUs />} />

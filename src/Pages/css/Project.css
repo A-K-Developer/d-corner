@@ -3,6 +3,7 @@
     height: 20vh;
     display: flex;
     justify-content: center;
+    margin-top: 20%;
 }
 
 .projectsThemeContainer h1 {
@@ -70,7 +71,7 @@
     left: 2em;
 }
 
-.description {
+.descriptionInProject {
     width: 85%;
     margin-left: 15%;
     word-wrap: break-word;
@@ -190,7 +191,7 @@
     width: 100px;
     height: 100px;
     max-height: 200px;
-    background-color: red;
+    background-color: transparent;
     z-index: 11;
 }
 
@@ -198,10 +199,41 @@
     width: 100px;
     height: 100px;
     max-height: 200px;
-    background-color: green;
+    background-color: transparent;
     z-index: 11;
 }
 
 img {
     width: 100%;
+}
+.gallery{
+    position: relative;
+}
+.btnsForGallery{
+    display: flex;
+    gap: 20%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0.6em;
+}
+.btnsForGallery div{
+    width: 40%;
+    height:100% ;
+    z-index: 101;
+
+}
+
+.containerForProjects{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    width: 100%;
+}
+.projectNext{
+    width: 40%;
+    margin: auto;
+}
+.projectNext h1{
+    font-size: var(--MobileHeading);
 }

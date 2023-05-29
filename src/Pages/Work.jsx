@@ -1,8 +1,9 @@
 import React  from 'react'
 
 import { Link, useNavigate, useLocation } from "react-router-dom"
-import { galleryImg, projects } from "../utils/constants"
-import { useState, useEffect } from 'react';
+import { galleryImg, logo, projects  } from "../utils/constants"
+import { useState, useEffect,useRef } from 'react';
+import { ProjectGallery } from '../components/index'
 import './css/WorkPage.css'
 
 
@@ -11,35 +12,37 @@ import './css/WorkPage.css'
 
 
 const Work = () => {
+ 
+    const hideContentRef = useRef(null)
 
-    const ProjectGallery = () => {
-        const navigate = useNavigate();
-        let location = useLocation();
+    useEffect(() => {
+        const imges = document.querySelectorAll('.singleProject img')
+        for (let index = 0; index < imges.length; index++) {
+            if(index % 2 === 0){
+                const element = imges[index];
+                element.style.height = '50%';
+            }
+            
+        }
+    })
 
-        console.log(location);
-        let RedirectToProject = (e) => {
-        
-            let curr = e.currentTarget.firstElementChild.nextSibling.textContent;
-            navigate(`/Project/${curr}`,{replace: true});
-         
-         }
+    useEffect(() => {
+        const part2 = document.querySelector('.movingLogo.part2');
+        const handleAnimationEnd = () =>{ 
+            console.log(hideContentRef);
+            hideContentRef.current.classList.add('hideContentWork1')
+        }
+        if(part2){
+            console.log(part2);
+            part2.addEventListener('animationend', handleAnimationEnd)
+        }
+        return () => {
+            if(part2){
+                part2.removeEventListener('animationend',handleAnimationEnd)
+            }
+        }
+    },[])
 
-        return(
-            <>
-            {Object.keys(projects).map((key) => {
-                const project = projects[key];
-                return(
-                    <div onClick={RedirectToProject} key={key}>
-                        <img src={project.headerImg} alt="projectHeading" />
-                        <h1>{project.projectName}</h1>
-                        <p>{project.typeOfProject}</p>
-                    </div>
-                )
-            })}
-            </>
-        )
-    }
-  
 
 
 return (
@@ -56,7 +59,7 @@ return (
                     alt="des"
                     className="movingLogo part2"
                 />
-                <div>
+                <div className='hideContentWork' ref={hideContentRef}>
                     <h1>Our Work</h1>
                     <p>Empowering your company to become noticeable and recognizable</p>
                     <Link className="btn work-btn" to="./Service">Get a deal</Link>
