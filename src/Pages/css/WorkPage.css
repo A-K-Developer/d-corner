@@ -1,129 +1,146 @@
 @import url('../../index.css');
 
-.logoHeader{
+.logoHeader {
     width: 100%;
     height: 80vh;
     background: linear-gradient(180deg, #FCD660 0%, rgba(237, 179, 182, 0) 100%, rgba(237, 179, 182, 0) 100%);
 
-    
+
 }
-.container{
+
+.container {
     width: 100%;
-    height: 100%;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-.container img:nth-child(1) {
+.movingLogo {
     position: absolute;
-    width: 50%;
-    top: 14em;
-    left: 3em;
-  }
-  
-  .movingLogo {
     width: 40%;
-    top: 8em;
-    left: 3em;
+    top:  25%;
+    left: 30%;
     animation: animateLogo 1s ease forwards;
     animation-delay: 0.5s;
 
-  }
-  @keyframes animateLogo {
-    from {
-      width: 50%;
-      top: 14em;
-      left: 3em;
-    }
-    to {
-      width: 40%;
-      top: 8em;
-      left: 2em;
-    }
-  }
-.container img:nth-child(2){
-    position: absolute;
-    width: 50%;
-    top: 22em;
-    left: 7em;
-    transform: rotate(180deg);
 }
-.part2{
-    width: 40%;
-    top:28em ;
-    left: 10em;
-    animation: animateLogo2 1s ease forwards;
-    animation-delay: 0.5s;
 
-  }
-  @keyframes animateLogo2 {
+@keyframes animateLogo {
     from {
         width: 50%;
-        top: 22em;
-        left: 7em;
+        top:  25%;
+        left: 30%;
     }
+
     to {
         width: 40%;
-        top:28em ;
-        left: 12em;
+        top: 15%;
+        left: 5%;
     }
-  }
-.hideContentWork{
+}
+
+.part2 {
+    position: absolute;
+    width: 40%;
+    top: 37%;
+    right: 35%;
+
+    animation: animateLogo2 1s ease forwards;
+    animation-delay: 0.5s;
+    transform: rotate(180deg);
+
+
+}
+
+@keyframes animateLogo2 {
+    from {
+        width: 50%;
+        top: 37%;
+        right: 35%;
+    }
+
+    to {
+        width: 40%;
+        left: auto;
+        top: 47%;
+        right: 5%;
+    }
+}
+
+.hideContentWork {
     display: none;
 }
-.hideContentWork1{
+
+.hideContentWork1 {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    
-    align-items: center;
-    position: relative; 
-    animation: animateLogo3 1s ease forwards;
-    
-}
-@keyframes animateLogo3 {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-  }
-  .portfolioWork h3{
-    font-family: var(--fontHeading);
-    font-weight: 400;
-    font-size: var(--MobileHeading);
-    line-height: 24.8px;
+    width: 100%;
 
-  }
-  .workContainer{
+    align-items: center;
+    position: relative;
+    top: 6%;
+    animation: animateLogo3 0.5s ease forwards;
+
+}
+.hideContentContainer{
+    width: 50%;
+    height: 20%;
+    position: relative;
+    top: -10%;
+    text-align: center;
+
+}
+
+@keyframes animateLogo3 {
+    0% {
+        opacity: 0;
+        height: 5%;
+
+    }
+
+    100% {
+       
+        height: 55%;
+        opacity: 1;
+
+    }
+}
+
+
+.workContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5%;
     justify-content: center;
 
-  }
-  .singleProject{
+}
+
+.singleProject {
     width: 40%;
     height: 347px;
-  }
-  .singleProject img{
+}
+
+.singleProject img {
     height: 15em;
-  }
-  .singleProject h1{
+}
+
+.singleProject h1 {
     font-size: var(--MobileH2);
     font-weight: 400;
     line-height: 19.84px;
     font-family: var(--fontHeading);
-  }
-  .singleProject p{
+}
+
+.singleProject p {
     font-weight: 400;
     font-size: var(--MobilePara);
     line-height: 16.8px;
     font-family: var(--fontParagraph);
-  }
+}
+
 @media (min-width: 768px) {
 
     .logoHeader {

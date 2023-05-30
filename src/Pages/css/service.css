@@ -1,21 +1,18 @@
 
 
 .headerServices{
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     margin: auto;
+    margin-top: 8em;
+    padding: 1em;
 
 }
 .headerServices h1{
-    font-weight: 400;
-    font-size: var(--MobileHeading);
     line-height: 24.8px;
-    font-family: var(--fontHeading);
 }
-.headerServices p{
 
-}
 .imgContainer{
     width: 100%;
     height: 40vh;
@@ -26,8 +23,9 @@
     right: 5%;
 }
 .scaleAnimation {
-    animation: scale 2s forwards;
-    transition: ease 2s;
+    animation: scale 1s forwards;
+    transition: ease 1s;
+    margin-top: 4em;
 
   }
   
@@ -54,10 +52,6 @@
     padding-left: 10%;
   }
   .whatWeDo h1{
-    font-size: var(--MobilePara);
-    font-family: var(--fontHeading);
-    font-weight: 400;
-    line-height: 19.84px;
     width: 50%;
   }
   .whatWeDo p{

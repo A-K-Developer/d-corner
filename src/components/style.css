@@ -1,178 +1,206 @@
 @import url('../index.css');
+*{
+  box-sizing: border-box;
+}
 
-.LinksNavPar{
-    display: none;
+.LinksNavPar {
+  display: none;
 }
-.main-nav{
-    position: sticky;
-    position: -webkit-sticky;
-    background: #fff;
-    z-index: 99;
-    width: 80%;
-    height: 100px;
-    align-items: center;
-    top:0;
-    padding: 2% 10%;
-    justify-content: space-between;
-  }
-  .burgerNavContainer{
-    width: 100%;
-    height: 25vh;
-    background-color: var(--colorPrimery);
-    position: absolute;
-    top: 7.3em;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.5s ease-out;
-  }
-  .burgerNavContainer{
-    display: none;
-  }
-  .LinkNav{
-    text-decoration: none;
-    color: var(--blackCol);
-    font-size: var(--MobileH2);
-    font-weight: normal;
-    width:85px;
-    transition: font-weight 0.2;
-    text-align: center;
-    z-index: 99;
-  }
-  .burgerContainer{
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-direction: column;
-    gap: 8px;
-    z-index: 99;
-  }
-  .burger-line{
-    width: 40px;
-    height: 3.33px;
-    background-color: var(--blackCol);
-    transition: ease-in 0.4s;
-  } 
-  .shortLine{
-    width: 25px;
-  }
-  .leftFooter{
-    display: flex;
-    flex-direction: column;
-  
-    color: var(--whiteCol);
-    width: 40%;
+
+.main-nav {
+  position: absolute;
+  background: #fff;
+  z-index: 99;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+  top: 0;
+  padding: 2% 10%;
+  justify-content: space-between;
+  display: flex;
 }
-.leftFooter img{
-    width: 129px;
+nav ul{
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap:1em;
 
 }
-.rightFooter{
-  
-    width: 30%;
-    margin: 0;
-}   
-.footer{
-    background-color: var(--blackCol);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
-    
-}   
-.leftFooter{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: 90%;
-    height: 300px;
-    gap: 16px;
-    position: relative;
-    left:5%;
-    top: 10%;
+.burgerNavContainer {
+  width: 100%;
+  height: 25vh;
+  background-color: var(--colorPrimery);
+  position: absolute;
+  top: 7.3em;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+
+.burgerNavContainer {
+  display: none;
+}
+
+.LinkNav {
+  text-decoration: none;
+  color: var(--blackCol);
+  font-size: var(--MobileH2);
+  font-weight: normal;
+  width: 85px;
+  transition: font-weight 0.2;
+  text-align: center;
+  z-index: 99;
+}
+
+.burgerContainer {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 99;
+}
+
+.burger-line {
+  width: 40px;
+  height: 3.33px;
+  background-color: var(--blackCol);
+  transition: ease-in 0.4s;
+}
+
+.shortLine {
+  width: 25px;
+}
+
+.leftFooter {
+  display: flex;
+  flex-direction: column;
+
+  color: var(--whiteCol);
+  width: 40%;
+}
+
+.leftFooter img {
+  width: 129px;
 
 }
-.leftFooter img{
-    position: relative;
-    right: 6%;
+
+.rightFooter {
+
+  width: 30%;
+  margin: 0;
 }
-.leftFooter p{
-    padding: 0;
-    margin: 0;
-    font-family: var(--fontParagraph);
-    font-weight: 600;
+
+.footer {
+  background-color: var(--blackCol);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+
 }
-.rightFooter{
-    width: 90%;
-    height: 450px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    color: var(--whiteCol);
-    position: relative;
-    margin: auto;
-    left: 0%;
+
+.leftFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 90%;
+  height: 300px;
+  gap: 16px;
+  position: relative;
+  left: 5%;
+  top: 10%;
+
 }
-.rightFooter h3{
-    font-size: var(--MobileHeading);
-    line-height: 40px;
-    font-weight: 400;
-    font-family: var(--fontHeading);
-    color: var(--whiteCol);
-    margin: 0px 0;
+
+.leftFooter img {
+  position: relative;
+  right: 6%;
 }
-.rightFooter p{
-    font-family: var(--fontParagraph);
-    font-size: var(--MobilePara);
-    line-height: 19px;
-    font-weight: 400;
-    color: var(--whiteCol);
-    width: 100%;
+
+.leftFooter p {
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
 }
-.subscribeBox{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1em;
-    justify-content: space-between;
+
+.rightFooter {
+  width: 90%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--whiteCol);
+  position: relative;
+  margin: auto;
+  left: 0%;
 }
-.subscribeBox p{
-    width: 100%;
-    margin-bottom: 0;
+
+.rightFooter h3 {
+  font-size: var(--MobileHeading);
+  color: var(--whiteCol);
+
+
 }
-.subscribeBox input{
-    height: 50px;
-    width: 335px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 12px;
+
+.rightFooter p {
+ 
+  color: var(--whiteCol);
+  width: 100%;
 }
-.subscribeBox button{
-    width: 169px;
-    height: 51px;
-    padding: 12px 24px 12px 0px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    background-color: var(--btnColor);
-    border: none;
+
+.subscribeBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: space-between;
 }
-.logo{
+
+.subscribeBox p {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.subscribeBox input {
+  height: 50px;
+  width: 335px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+}
+
+.subscribeBox button {
+  width: 169px;
+  height: 51px;
+  padding: 12px 24px 12px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: var(--btnColor);
+  border: none;
+}
+
+.logo {
   width: 80px;
   height: 80px;
   z-index: 56;
 }
+
 .anime-line {
   height: 2em;
   transition: height 2s ease-in;
@@ -184,6 +212,7 @@
   animation-duration: 2s;
   animation-timing-function: ease-in;
 }
+
 .VisService {
   opacity: 0;
 }
@@ -198,6 +227,7 @@
   0% {
     height: 0;
   }
+
   100% {
     height: 2em;
   }
@@ -205,62 +235,74 @@
 
 
 @media (min-width: 768px) {
-  
-    .burgerNavContainer{
-      display: none;
-    }
-    .burgerContainer{
-      display: none;
-    }
-    .main-nav{
-      position: absolute;
-      background: transparent;
-    }
-    .LinkNav{
-      font-size: var(--btnSize);
-    }
-    .logo{
-        width: 109px;
-        height: 109px;
-        z-index: 56;
-      }
-      
-      .LinksNav{
-        align-items: right;
-        gap: 40px;
-      }
-      .LinksNav a{
-        text-decoration: none;
-      }
-      
-      .navBarWhite{
-        color: #fff;
-      }
-      .navBarBlack{
-        color: #000;
-      }
-      .LinkNav:hover{
-        font-weight: bold;
-      }
-    .footer{
-        flex-direction: row;
-        height: 500px;
-    }   
-    .leftFooter{
-        width: 20%;
-        left: 10%;
-    
-    }
-    .rightFooter{
-        width: 516px;
-        right: 10%;
-    }
-    .rightFooter h3{
-        font-size: var(--headingSize);
-    }
-    .rightFooter p{
-        font-size: var(--paragraph);
-    }
-    
-   
+
+  .burgerNavContainer {
+    display: none;
   }
+
+  .burgerContainer {
+    display: none;
+  }
+
+  .main-nav {
+    position: absolute;
+    background: transparent;
+  }
+
+  .LinkNav {
+    font-size: var(--btnSize);
+  }
+
+  .logo {
+    width: 109px;
+    height: 109px;
+    z-index: 56;
+  }
+
+  .LinksNav {
+    align-items: right;
+    gap: 40px;
+  }
+
+  .LinksNav a {
+    text-decoration: none;
+  }
+
+  .navBarWhite {
+    color: #fff;
+  }
+
+  .navBarBlack {
+    color: #000;
+  }
+
+  .LinkNav:hover {
+    font-weight: bold;
+  }
+
+  .footer {
+    flex-direction: row;
+    height: 500px;
+  }
+
+  .leftFooter {
+    width: 20%;
+    left: 10%;
+
+  }
+
+  .rightFooter {
+    width: 516px;
+    right: 10%;
+  }
+
+  .rightFooter h3 {
+    font-size: var(--headingSize);
+  }
+
+  .rightFooter p {
+    font-size: var(--paragraph);
+  }
+
+
+}

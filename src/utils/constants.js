@@ -1,11 +1,11 @@
 
 
 let tonkinVideo;
-
-export const logo = 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/Logo-version1.png?alt=media&token=990e9459-a637-46cc-9f40-034ca0bea23a';
+//
+export const whiteLogo = 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/Logo-version1.png?alt=media&token=990e9459-a637-46cc-9f40-034ca0bea23a';
 export const video = 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/D%26D_VIDEO%20MAIN%20FINAL%20(1).mp4?alt=media&token=ff5fe6df-01d3-4037-b0fb-046925e2f37f';
-export const logoDark = 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/D%26D%20logo%20animation.gif?alt=media&token=75cab731-4381-4ed9-89e4-8169068ceac8';
-
+export const animatedLogo = 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/D%26D%20logo%20animation.gif?alt=media&token=75cab731-4381-4ed9-89e4-8169068ceac8';
+export const logoDark = 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/dark-logo-simple-version.png?alt=media&token=7724bab6-64ab-4276-a510-b7caa062be9e'
 
 
 export const galleryImg = {
@@ -49,6 +49,19 @@ export const advantage = [
     "Creativity",
     "Transparency",
     "Diversity",
+]
+
+export const textChangingMission= [
+    {
+        heading1: 'Our Mission Statement',
+        heading2: 'Our Mission',
+        heading3: 'Our Vision',
+    },
+    {
+        para1: 'Our mission as a digital design agency is to become a reliable and trustworthy partner for our clients on the way to digitalization by building meaningful visual identities and engaging websites.',
+        para2: 'Our mission as a digital design agency is to become a reliable and trustworthy partner for our clients on the way to digitalization by building meaningful visual identities and engaging websites.',
+        para3: 'Our vision is to become a reliable partner for our clients on their way to growth and prosperity in digitalization.'
+    },
 ]
 
 export const services = [

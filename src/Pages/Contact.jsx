@@ -1,10 +1,10 @@
 import FormContact from '../components/formCompo';
-import './css//ContactPage.css'
+import './css/ContactPage.css'
 
 ;const Contact = () => {
     return (
         <div>
-            <div className="header">
+            <div className="headerInContact">
                 <div className="heading">
                     <h3>Let's get in touch!</h3>
                     <p>A to-the-point tagline that really draws in the user</p>

@@ -41,3 +41,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1,h2,h3{
+  font-style: normal;
+  font-weight: 400;
+  font-family: var(--fontHeading);
+  margin: 0px 0;
+  font-size: var(--MobileHeading);
+  line-height: 20.8px;
+
+}
+
+p{
+  font-family: var(--fontParagraph);
+  font-size: var(--MobilePara);
+  line-height: 19px;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  h1,h2,h3{
+    font-size: var(--headingSize);
+  line-height: 40px;
+
+  }
+
+  p{
+    font-size: var(--paragraph);
+  }
+
+}

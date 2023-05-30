@@ -1,12 +1,12 @@
 import React from 'react';
-import { logo } from '../utils/constants'
+import { whiteLogo } from '../utils/constants'
 import './style.css';
 
 const Footer = () => (
     <div className='footer'>
 
         <div className="leftFooter">
-            <img src={logo} alt="logo" />
+            <img src={whiteLogo} alt="logo" />
             <p>Copenhagen, Denmark</p>
             <p>+45 20 73 03 20</p>
             <p>designdevcorner@gmail.com</p>

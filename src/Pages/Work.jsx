@@ -29,11 +29,9 @@ const Work = () => {
     useEffect(() => {
         const part2 = document.querySelector('.movingLogo.part2');
         const handleAnimationEnd = () =>{ 
-            console.log(hideContentRef);
             hideContentRef.current.classList.add('hideContentWork1')
         }
         if(part2){
-            console.log(part2);
             part2.addEventListener('animationend', handleAnimationEnd)
         }
         return () => {
@@ -59,11 +57,13 @@ return (
                     alt="des"
                     className="movingLogo part2"
                 />
+                <div className="hideContentContainer">
                 <div className='hideContentWork' ref={hideContentRef}>
                     <h1>Our Work</h1>
                     <p>Empowering your company to become noticeable and recognizable</p>
                     <Link className="btn work-btn" to="./Service">Get a deal</Link>
                 </div>
+            </div>
             </div>
         </div>
         <div className="portfolioWork">

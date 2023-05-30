@@ -1,6 +1,4 @@
-.LinksNav {
-    display: none;
-}
+
 
 .Video {
     display: none;
@@ -39,8 +37,6 @@
 }
 
 .welcome-text-container h1 {
-    font-family: var(--fontHeading);
-    font-size: var(--MobileHeading);
     line-height: 24.2px;
     font-weight: 600;
     color: var(--blackCol);
@@ -51,9 +47,6 @@
     color: var(--blackCol);
     text-align: start;
     width: 75%;
-    font-size: var(--MobilePara);
-    font-weight: 400;
-    font-family: var(--fontParagraph)
 }
 
 .btn {
@@ -86,30 +79,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 373px;
+    width: 100%;
     position: relative;
     gap: 50px;
    
 }
 
 .aboutUsContainer {
-    width: 90%;
+    width: 70%;
+   
 }
 
 .aboutUsContainer h1 {
-    font-family: var(--fontHeading);
-    font-size: var(--MobileHeading);
     line-height: 25px;
-    font-weight: 400;
     margin-top: 2em;
 }
 
 .aboutUsContainer p {
-    width: 90%;
-    font-family: var(--fontParagraph);
-    font-weight: 400;
-    font-size: var(--MobilePara);
-    line-height: 17px;
+    width: 80%;
     text-align: justify;
     
 }
@@ -131,10 +118,7 @@
 }
 
 .advantage h3 {
-    font-weight: 400;
-    font-size: var(--MobileHeading);
     line-height: 25px;
-    font-family: var(--fontHeading);
 }
 
 .skills {
@@ -155,12 +139,11 @@
 .skill {
     display: flex;
     flex-direction: row;
+    align-items: center;
+
 }
 
 .skill h1 {
-    font-family: var(--fontHeading);
-    font-weight: 400;
-    font-size: var(--MobileHeading);
     line-height: 25px
 }
 
@@ -169,7 +152,7 @@
     width: 4px;
    
     position: relative;
-    top: 0.7em;
+    top: 0.em;
     left: -1em;
 }
 
@@ -195,9 +178,6 @@
 }
 
 .service h3 {
-    font-family: var(--fontHeading);
-    font-weight: 400;
-    font-size: var(--MobileHeading);
     line-height: 1em;
     color: var(--whiteCol);
     width: 100%;
@@ -218,7 +198,6 @@
 }
 
 .serviceContainer h1 {
-    font-size: var(--MobileHeading);
     margin-bottom: 2em;
 }
 
@@ -263,7 +242,6 @@
 .VisService p {
 
     padding: 5px;
-    font-size: var(--MobilePara)
 }
 
 .work {
@@ -275,9 +253,6 @@
 .work h3 {
     width: 90%;
     margin-left: 5%;
-    font-family: var(--fontHeading);
-    font-weight: 400;
-    font-size: var(--MobileHeading);
     line-height: 24.8px;
 
 }
@@ -368,8 +343,6 @@
     }
 
     .welcome-text-container h1 {
-        font-size: var(--headingSize);
-        line-height: 40px;
         text-align: center;
         color: var(--whiteCol);
     }
@@ -379,8 +352,6 @@
         color: var(--whiteCol);
         text-align: center;
         width: 600px;
-        font-size: var(--paragraph);
-        font-weight: 400;
     }
 
     .btn {
@@ -437,13 +408,7 @@
         width: 30em;
     }
 
-    .aboutUsContainer h1 {
-        font-size: var(--headingSize);
-        line-height: 39.68px;
-    }
-
     .aboutUsContainer p {
-        font-size: var(--paragraph);
         line-height: 24px;
     }
 
@@ -457,8 +422,7 @@
 
     .advantage h3 {
         width: 55%;
-        font-size: var(--headingSize);
-        line-height: 40px;
+       
     }
 
     .skills {
@@ -495,8 +459,6 @@
     }
 
     .service h3 {
-        font-size: var(--headingSize);
-        line-height: 40px;
         width: 50%;
     }
 

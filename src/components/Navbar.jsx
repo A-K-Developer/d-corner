@@ -1,7 +1,7 @@
 import { Stack } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from 'react'
-import { logo } from '../utils/constants';
+import { whiteLogo } from '../utils/constants';
 import './style.css'
 
 
@@ -66,7 +66,7 @@ const Navbar = () => {
       direction="row"
     >
       <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-        <img id="logo-link" className="logo" src={logo} alt="logo" height={55} />
+        <img id="logo-link" className="logo" src={whiteLogo} alt="logo" height={55} />
       </Link>
       <div className="burgerContainer" onClick={openBurgerMenu}>
         <div className="burger-line "></div>
