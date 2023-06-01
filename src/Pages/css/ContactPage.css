@@ -2,96 +2,132 @@
     
 .headerInContact{
     width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10%;
-   
-
-
-}
-.heading{
-    width: 30%;
-}
-.heading h3{
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 48px;
-    color: #1d2939;
-
-}
-.heading p{
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 29px;
-    color: #1d2939;
-}
-.contactInfo{
-    width: 25em;
-    height: 20em;
-    background-color: #fcd660;
-    border-radius: 20px;
+    height: 80vh;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 22px 0px;
-    gap: 1em;
-    padding: 2em;
-}
-.contactInfo h4{
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 40px;
-    margin: 0;
-}
-.contactInfo p{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-}
-.infoRows{
-    display: flex;
-    flex-direction: row;
-
-}
-.infoRows p{
-    margin: 0.5em;
-}
-
-
-
-
-
-@media (min-width: 768px) {
-
-    
-.headerInContact{
-
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+    position: relative;
+    
     gap: 10%;
-   
-
+    margin-bottom: 15em;
 
 }
-.headerInContact img{
+.header-Img{
     position: absolute;
     top:0 ;
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+
+    z-index: 5;
 }
 .heading{
+    width: 60%;
+    z-index: 77;
+    position: relative;
+    top: 10em;
+    color: var(--whiteCol);
+
+}
+
+.contactInfo{
+    width: 80%;
+    height: 320px;
+   
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--colorPrimery);
+    z-index: 100;
+    padding: 1em 2em;
+    position: relative;
+    top: 30vh;
+}
+.infoContent{
+    z-index: 55;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.infoRows{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 80%;
+    gap: 2em;
+    margin: auto;
+}
+.infoRows img{
+    width: 30px;
+}
+.form{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin: auto;
+    margin-bottom: 5em;
+}
+.form-heading{
+    width: 80%;
+    text-align: justify;
+}
+.form-heading h3{
+    width: 80%;
+}
+.formInfo{
+    width: 80%;
+    margin: auto;
+}
+.formInfo form{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+
+}
+.formInfo form div{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.3em;
+}
+.formInfo form label{
+    width: 100%;
+}
+.formInfo form input{
+    padding: 0.5em 1em;
+    font-size: 14px;
+}
+.formInfo form textarea {
+    height:10em;
+    padding: 0.5em 1em;
+    font-size: 14px;
+
+}
+.contactBtn{
+    width: 50%;
+    margin: auto;
+}
+
+@media (min-width: 768px) {
+
+    
+.headerInContact{
+    flex-direction: row;
+}
+
+.heading{
     width: 30%;
+    top: 0;
 }
 .heading h3{
     font-weight: 600;
@@ -107,18 +143,28 @@
     line-height: 29px;
     color: #1d2939;
 }
-.contactInfo{
-    width: 35%;
-    height: auto;
-    background-color: #fcd660;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-   padding: 1em 2em 2em 1em;
+.opacityContactInfo{
+    position: absolute;
+    filter: blur(2px);
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+
+
 }
-.contactInfo h4{
+.contactInfo{
+    width: 25%;
+    height: auto;
+    color: #Fff;
+   padding: 1em 2em 2em 1em;
+   background-color: transparent;
+   top:0;
+}
+.contactInfo h3{
     font-weight: 600;
     font-size: 32px;
     line-height: 40px;
@@ -130,38 +176,24 @@
     font-size: 20px;
     line-height: 24px;
 }
-.infoRows{
-    display: flex;
-    flex-direction: row;
 
-}
-.infoRows p{
-    margin: 0.5em;
-}
+
 .form{
     width: 42%;
     margin: 5em auto;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:2em;
 }
 .form-heading{
     display: flex;
     flex-direction: column;
-    text-align: justify;
 }
 .formInfo{
     width: 100%;
 }
 .formInfo form{
-    width: 90%;
-    margin: auto;
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1em;
     justify-content: space-between;
     align-items: center;
 

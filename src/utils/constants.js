@@ -8,6 +8,11 @@ export const animatedLogo = 'https://firebasestorage.googleapis.com/v0/b/d-d-cor
 export const logoDark = 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/dark-logo-simple-version.png?alt=media&token=7724bab6-64ab-4276-a510-b7caa062be9e'
 
 
+export const lastPictures = {
+    contactPage : 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/contactBackground.jpg?alt=media&token=397aecc6-93aa-4f4e-acfe-3cce6540aedf',
+    servicePage: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/servicePage.jpg?alt=media&token=88b62a9d-fc9d-47ef-88e8-79cfcb87f866',
+}
+
 export const galleryImg = {
     designEleLogo: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2FTakeaway_mockup.jpg?alt=media&token=bc775a76-fd0e-46c4-bbde-731c6f72dd7a',
     firstImg: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/galery%2F9.jpg?alt=media&token=6af2dee2-8d1c-406c-b371-846a460820dd',

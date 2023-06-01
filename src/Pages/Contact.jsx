@@ -1,17 +1,19 @@
 import FormContact from '../components/formCompo';
 import './css/ContactPage.css'
+import {lastPictures} from '../utils/constants';
 
 ;const Contact = () => {
     return (
         <div>
             <div className="headerInContact">
-                <img src="" alt="" />
+                <img className='header-Img' src={lastPictures.contactPage} alt="contactPAge error" />
                 <div className="heading">
                     <h3>Let's get in touch!</h3>
                     <p>A to-the-point tagline that really draws in the user</p>
                 </div>
                 <div className="contactInfo">
-                    <h4>Contact us</h4>
+                    <div className="infoContent">
+                    <h3>Contact us</h3>
                     <p>We encourage you to fill up the contact form and we will get back to you as soon as possible.</p>
                     <div className="contactInfoContainer">
                         <div className="infoRows">
@@ -28,6 +30,9 @@ import './css/ContactPage.css'
                                 Copenhagen, Denmark</p>
                         </div>
                     </div>
+                    </div>
+                    <div className="opacityContactInfo"></div>
+
                 </div>
             </div>
             <div className="form">
