@@ -101,7 +101,7 @@ const FormContact = () => {
             onChange={handleChange}
           ></textarea>
         </div>
-        <button type="submit">Submit</button>
+        <button className='btn contactBtn' type="submit">Submit</button>
       </form>
     </div>
   );

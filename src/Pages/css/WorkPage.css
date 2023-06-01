@@ -148,116 +148,144 @@
         z-index: 0;
 
     }
-
+/* 
     .hiddenContent {
         opacity: 1;
         position: absolute;
         visibility: visible;
 
-    }
+    } */
 
     .container {
         position: relative;
-        width: 100vw;
+        
         height: 100vh;
     }
-
-    .container img:nth-child(1) {
-        position: absolute;
+    .movingLogo{
         width: 10%;
-        top: 40%;
+        top: 35%;
         left: 40%;
     }
-
-    @keyframes slideOut1 {
-        0% {
-            top: 40%;
-            left: 40%;
-        }
-
-        25% {
+    @keyframes animateLogo {
+        from {
+            width: 10%;
             top: 35%;
-            left: 35%;
-        }
-
-        50% {
-            top: 30%;
-            left: 30%;
-        }
-
-        75% {
-            top: 25%;
-            left: 25%;
-        }
-
-        100% {
-            top: 20%;
-            left: 20%;
-        }
-    }
-
-    .slide-out1 {
-        animation: slideOut1 2s ease-in-out forwards;
-    }
-
-    @keyframes slideOut2 {
-        0% {
-            top: 50%;
             left: 45%;
         }
-
-        25% {
-            top: 55%;
-            left: 50%;
-        }
-
-        50% {
-            top: 60%;
-            left: 55%;
-        }
-
-        75% {
-            top: 65%;
-            left: 60%;
-        }
-
-        100% {
-            top: 70%;
-            left: 65%;
+    
+        to {
+             width: 25%;
+            top: 10%;
+            left: 5%; 
+            
         }
     }
-
-    .slide-out2 {
-        animation: slideOut2 2s ease-in-out forwards;
-    }
-
-    .container img:nth-child(2) {
+    .part2 {
         position: absolute;
         width: 10%;
-        top: 50%;
-        left: 45%;
+
+        top: 37%;
+        right: 35%;
+    
+        animation: animateLogo2 1s ease forwards;
+        animation-delay: 0.5s;
         transform: rotate(180deg);
+    
+    
+    }
+    
+@keyframes animateLogo2 {
+    from {
+        width: 10%;
+        top: 45%;
+        left: 45%;
     }
 
-    .hiddenContent {
-        width: 20%;
-        padding: 16px;
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 30%;
-        left: 35%;
+    to {
+        width: 25%;
+        bottom: 0%;
+        top: auto;
+        right: 5%;
+        left: auto;
+    }
+}
+    .hideContentWork {
+    display: none;
+}
+
+.hideContentWork1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    align-items: center;
+    position: relative;
+    top: 6%;
+    animation: animateLogo3 0.5s ease forwards;
+
+}
+.hideContentContainer{
+    width: 50%;
+    height: 20%;
+    position: relative;
+    top: -10%;
+    text-align: center;
+
+}
+
+@keyframes animateLogo3 {
+    0% {
+        opacity: 0;
+        height: 5%;
 
     }
 
-    .work-btn {
-        width: 60%;
-        height: 20px;
+    100% {
+       
+        height: 55%;
+        opacity: 1;
+
+    }
+}
+.hideContentWork {
+    display: none;
+}
+
+.hideContentWork1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    align-items: center;
+    position: relative;
+    top: 6%;
+    animation: animateLogo3 0.5s ease forwards;
+
+}
+.hideContentContainer{
+    width: 30%;
+    height: 20%;
+    position: relative;
+    top: 0%;
+    text-align: center;
+
+}
+
+@keyframes animateLogo3 {
+    0% {
+        opacity: 0;
+        height: 5%;
+
     }
 
-    .hiddenContent p {
-        text-align: center;
+    100% {
+       
+        height: 55%;
+        opacity: 1;
+
     }
+}
+
+
+
 }

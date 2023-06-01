@@ -71,7 +71,7 @@ export const services = [
     "Brand Styles",
     "Art & Illustrations",
     "Photo Styles",
-    "Website",
+    "Building websites",
     "UX|UI Web Design",
     "Front-end Development",
     "WordPress",

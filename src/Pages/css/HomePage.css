@@ -1,5 +1,3 @@
-
-
 .Video {
     display: none;
 }
@@ -37,8 +35,9 @@
 }
 
 .welcome-text-container h1 {
-    line-height: 24.2px;
+    line-height: 44.2px;
     font-weight: 600;
+
     color: var(--blackCol);
 }
 
@@ -82,12 +81,12 @@
     width: 100%;
     position: relative;
     gap: 50px;
-   
+
 }
 
 .aboutUsContainer {
     width: 70%;
-   
+
 }
 
 .aboutUsContainer h1 {
@@ -98,7 +97,7 @@
 .aboutUsContainer p {
     width: 80%;
     text-align: justify;
-    
+
 }
 
 .logoContainer {
@@ -150,7 +149,7 @@
 .skillLine {
     background-color: var(--blackCol);
     width: 4px;
-   
+
     position: relative;
     top: 0.em;
     left: -1em;
@@ -264,6 +263,8 @@
     flex-wrap: wrap;
     gap: 1em;
     justify-content: center;
+    height: 200vh;
+   
 }
 
 .galery img {
@@ -300,9 +301,10 @@
 }
 
 .gallery-btn {
-    margin: auto;
-    margin-top: 4em;
-    width: 60%;
+   position: absolute;
+   bottom: 5%;
+   width: 40%;
+   left: 30%;
 }
 
 @media (min-width: 768px) {
@@ -371,6 +373,19 @@
         position: relative;
     }
 
+    .footer-btn {
+        width: 38%;
+        height: 51px;
+        padding: 12px 24px 12px 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background-color: var(--btnColor);
+        border: none;
+    }
+
 
     @keyframes yellowSlide {
         0% {
@@ -401,19 +416,28 @@
         height: 100vh;
         width: 80%;
         gap: 15%;
+        margin: auto;
 
     }
 
     .aboutUsContainer {
-        width: 30em;
+        width: 40%;
+        height: 500px;
+    }
+    .aboutUsContainer h1 {
+        line-height: 1em;
+        margin-top: 2em;
     }
 
     .aboutUsContainer p {
         line-height: 24px;
+        width: 100%;
     }
 
     .logoContainer {
         width: 40%;
+        height: 500px;
+
     }
 
     .advantage {
@@ -422,7 +446,7 @@
 
     .advantage h3 {
         width: 55%;
-       
+
     }
 
     .skills {
@@ -436,9 +460,10 @@
         font-size: 53px;
         line-height: 66px;
     }
-    .skill{
+
+    .skill {
         flex-direction: column;
-    
+
     }
 
     .skillLine {
@@ -465,11 +490,12 @@
     .serviceContainer {
         font-size: 45px;
     }
-    .serviceContainer h1{
+
+    .serviceContainer h1 {
         font-size: 80px;
     }
-    .serviceContainer:first-of-type {
-    }
+
+    .serviceContainer:first-of-type {}
 
     .serviceContainer:last-of-type {
         left: 35%;
@@ -485,53 +511,76 @@
         padding: 0;
         font-size: 36px;
     }
-
-    .work {
-        height: 175vh;
+    .VisService{
+        opacity: 1;
     }
-    .work h3{
+    .work {
+        height: 375vh;
+    }
+
+    .work h3 {
         width: 30%;
         margin: 4em;
+    }
+    .galery {
+        z-index: -2;
     }
 
     .galery img {
         width: 30%;
+        position: absolute;
     }
 
     .gallery-btn {
-        top: -2.5em;
+    width: 24%;
+        left: 38%;
+    bottom: 5%;
     }
 
-  
+
 
     .galery img:nth-child(1) {
-      
+
         width: 25%;
+        top: 0%;
+        left: 20%;
     }
 
     .galery img:nth-child(2) {
-        
+
         width: 20%;
+        top: 2%;
+        left: 35%;
+
     }
 
     .galery img:nth-child(3) {
-      
+
         width: 30%;
+        top: 15%;
+        left: 22%;
+
     }
 
     .galery img:nth-child(4) {
-        
+
         width: 35%;
+        top: 17%;
+        left: 30%;
     }
 
     .galery img:nth-child(5) {
-        
+
         width: 20%;
+        top: 19%;
+        left: 25%;
     }
 
     .galery img:nth-child(6) {
-        
+
         width: 35%;
+        top: 22%;
+        left: 45%;
     }
 
 

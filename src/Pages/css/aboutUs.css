@@ -21,18 +21,6 @@
     line-height: 16.8px;
 }
 
-.header-AboutUs h1:nth-child(3) {
-    width: 50%;
-    color: gainsboro;
-    text-align: center;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 40px;
-    font-family: var(--fontHeading);
-    position: absolute;
-    bottom: 1em;
-
-}
 
 
 .storyBehaid {
@@ -112,4 +100,133 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+@media (min-width: 768px) {
+    .header-AboutUs {
+        height: 80vh;
+      
+    }
+    
+    .header-AboutUs h1 {
+        line-height: 24.8px;
+        color: var(--whiteCol);
+        z-index: 20;
+    }
+    
+    .header-AboutUs p {
+        width: 70%;
+        text-align: center;
+        line-height: 16.8px;
+        z-index: 20;
+
+        color: var(--whiteCol);
+
+    }
+    .aboutTextContainer{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 3%;
+    }
+    .opacityTextContainer{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        left: 0;
+        background-color: #000;
+        z-index: 10;
+        filter: blur(2px);
+
+
+    }
+    
+ 
+    
+    .storyBehaid {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        margin: 5em auto;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    .storyBehaid h1 {
+        width: 80%;
+        line-height: 34.8px;
+        text-align: center;
+    
+    }
+    
+    .whiteBackground {
+        height: 80vh;
+    
+    }
+    
+    .purpleSquare {
+        width: 530px;
+        height: 530px;
+        left: -375px;
+    }
+    
+    .textSectionInWhiteBack {
+        width: 50%;
+        position: relative;
+        left: -40px;
+        height: 300px;
+    }
+    
+    .textSectionInWhiteBack h1 {
+        line-height: 24.8px;
+    }
+    
+    .textSectionInWhiteBack p {
+        align-items: justify;
+    }
+    
+    .lastHeadingWork {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: justify;
+        align-items: flex-start;
+        margin: auto;
+    }
+    
+    .lastHeadingWork h1 {
+        width: 50%;
+    }
+    .lastHeadingWork p{
+        width: 60%;
+    }
+    
+    .personas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:1em
+    }
+    .persona{
+        width: 35%;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        background-color: gray;
+    }
+    .persona img{
+        width: 70%;
+        height: 250px;
+        
+    }
+    
+
 }

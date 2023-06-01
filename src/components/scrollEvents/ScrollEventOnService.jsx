@@ -8,18 +8,21 @@ const ServiceSection = () => {
     const handleScroll = (entries) => {
       const [entry] = entries;
       if (entry.isIntersecting) {
+    console.log('U saw me');
+
         const visServiceElements = entry.target.getElementsByClassName('VisService');
         Array.from(visServiceElements).forEach((visService) => {
           visService.classList.add('fade-in');
         });
       } else {
+    console.log('U sawssss me');
+    
         const visServiceElements = entry.target.getElementsByClassName('VisService');
         Array.from(visServiceElements).forEach((visService) => {
           visService.classList.remove('fade-in');
         });
       }
     };
-
     const options = {
       root: null,
       rootMargin: '0px',

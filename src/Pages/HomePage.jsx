@@ -2,7 +2,7 @@
 import { Link, } from 'react-router-dom';
 import './css/HomePage.css'
 import {
-    logoDark, video, welcomeTextContainer, buttons,
+    animatedLogo, video, welcomeTextContainer, buttons,
     aboutUsContainer, advantage, services, work
 } from '../utils/constants';
 import { Gallery, ButtonComp, HandleScrollEvent,ServiceSection } from '../components/index'
@@ -32,7 +32,7 @@ const HomePage = () => {
                     <ButtonComp type="About" />
                 </div>
                 <div className="logoContainer">
-                    <img src={logoDark} alt="Black Logo missing" />
+                    <img src={animatedLogo} alt="Black Logo missing" />
                 </div>
             </div>
             <HandleScrollEvent />

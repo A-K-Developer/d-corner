@@ -1,6 +1,7 @@
 {
   "name": "d-corner",
   "version": "0.1.0",
+  "homepage": "https://github.com/A-K-Developer/d-corner/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.0",
@@ -9,6 +10,7 @@
     "@mui/material": "^5.13.2",
     "@react-navigation/native-stack": "^6.9.12",
     "axios": "^0.27.2",
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
@@ -22,6 +24,8 @@
     "styled-components": "^5.3.11"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

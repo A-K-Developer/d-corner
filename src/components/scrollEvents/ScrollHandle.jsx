@@ -8,7 +8,7 @@ const HandleScrollEvent = () => {
   useEffect(() => {
     const handleScroll = () => {
       const section = document.querySelector('.advantage');
-      const lines = document.querySelectorAll('.skillLine');
+       lines = document.querySelectorAll('.skillLine');
 
       if (section) {
         const { top, bottom } = section.getBoundingClientRect();

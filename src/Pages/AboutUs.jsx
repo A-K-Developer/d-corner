@@ -22,9 +22,11 @@ const AboutUs = () => {
         <>
             <div>
                 <div className="header-AboutUs">
+                    <div className="aboutTextContainer">
+                    <div className="opacityTextContainer"></div>
                     <h1>Our story</h1>
                     <p>All famous and successful worldwide brands have a compelling and unique story of how they were created. </p>
-                    <h1>D&D Corner</h1>
+                    </div>
                 </div>
                 <div className="storyBehaid">
                     <h1>The story behind D&D Corner</h1>

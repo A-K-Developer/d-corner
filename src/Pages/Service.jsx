@@ -2,6 +2,24 @@ import { useEffect, useRef } from 'react';
 import { imgForService } from '../utils/constants';
 import './css/service.css';
 
+const ServiceTemplate = () => {
+
+  return(
+    <>
+      <div className="containerForService">
+        <h1>Visual Identity</h1>
+        <div className="rowText">
+          <p>Our visual identity service is dedicated to helping businesses establish a strong and consistent brand presence through effective visual communication. We understand that a visually appealing and cohesive brand identity plays a crucial role in attracting and engaging customers, building trust, and differentiating your brand from competitors.</p>
+          <p>We can make a design manual that will include logo design, colour palette, typography, imagery style, and other graphic assets essential for your visual identity.
+Our goal is to provide you with a visually compelling and cohesive brand identity that helps your business stand out, build brand recognition, and connect with your customers on a deeper level.</p>
+        </div>
+      </div>
+
+    </>
+  )
+
+}
+
 const Service = () => {
   const imgRef = useRef(null);
 
@@ -31,19 +49,13 @@ const Service = () => {
       <div className="headerServices">
         <h1>Our services</h1>
         <div className="imgContainer">
-          <img ref={imgRef} src={imgForService[0]} alt={imgForService[0]} />
+        <img ref={imgRef} src={imgForService[0]} alt={imgForService[0]} />
+
         </div>
-        <p>
-          Have you ever asked yourself how your clients and competitors perceive your company, whether it is easily recognizable, and what they think about it?
-        </p>
-        <p>
-          Visual identity is about creating an emotional connection with the viewers. The aim is to talk indirectly about who your company is and what services it is providing.
-        </p>
       </div>
-      <div className="whatWeDo">
-        <h1>So, what can we do for your business? </h1>
-        <p>We can make a design manual that will include logo design, colour palette, typography, imagery style, and other graphic assets essential for your visual identity. The design manual will include a description of our decisions and how they can be used.</p>
-      </div>
+      <ServiceTemplate />
+
+      
     </div>
   );
 };

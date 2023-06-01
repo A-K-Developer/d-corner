@@ -5,6 +5,7 @@ import './css/ContactPage.css'
     return (
         <div>
             <div className="headerInContact">
+                <img src="" alt="" />
                 <div className="heading">
                     <h3>Let's get in touch!</h3>
                     <p>A to-the-point tagline that really draws in the user</p>
@@ -34,9 +35,9 @@ import './css/ContactPage.css'
                     <h3>Let's get this show on the road</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. </p>
                 </div>
-                <div className="formInfo">
+                
                     <FormContact />
-                </div>
+               
             </div>
         </div>
     )

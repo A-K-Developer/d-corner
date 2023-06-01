@@ -3,13 +3,12 @@
 .headerInContact{
     width: 100vw;
     height: 100vh;
-    background-color: red;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10%;
-    margin-top: 50em;
+   
 
 
 }
@@ -72,17 +71,24 @@
 
     
 .headerInContact{
+
     width: 100vw;
     height: 100vh;
-    background-color: red;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10%;
-    margin-top: 50em;
+   
 
 
+}
+.headerInContact img{
+    position: absolute;
+    top:0 ;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 .heading{
     width: 30%;
@@ -102,17 +108,15 @@
     color: #1d2939;
 }
 .contactInfo{
-    width: 25em;
-    height: 20em;
+    width: 35%;
+    height: auto;
     background-color: #fcd660;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: 22px 0px;
-    gap: 1em;
-    padding: 2em;
+   padding: 1em 2em 2em 1em;
 }
 .contactInfo h4{
     font-weight: 600;
@@ -134,5 +138,59 @@
 .infoRows p{
     margin: 0.5em;
 }
+.form{
+    width: 42%;
+    margin: 5em auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2em;
+}
+.form-heading{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+.formInfo{
+    width: 100%;
+}
+.formInfo form{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-between;
+    align-items: center;
 
+}
+.formInfo form div:nth-child(1){
+    width: 48%;
+}
+.formInfo form div:nth-child(2){
+    width: 48%;
+
+}
+.formInfo form div{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1em;
+}
+.formInfo form div input{
+    background-color: lightgray;
+    padding: 1em;
+    border-style: none;
+}
+.formInfo form div textarea{
+    background-color: lightgray;
+    padding: 1em;
+    border-style: none;
+}
+.contactBtn{
+    width: 40%;
+    margin: auto;
+}
 }

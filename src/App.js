@@ -4,6 +4,9 @@ import { Navbar, Footer, ScrollToTop } from "./components/index";
 import { HomePage, Work, Service, AboutUs, Contact, Project } from './Pages/indexPages'
 import './components/style.css';
 
+// Account details for One.com 
+//username : lavi0200@edu.zealand.dk
+// password : designdevelopmentcorner
 
 function App() {
   return (
@@ -11,9 +14,6 @@ function App() {
       <Box>
         <Navbar />
         <ScrollToTop />
-       
-
-
           <Routes>
             <Route exact path='/' element={<HomePage />} />
             <Route path="/Work" element={<Work />} />
