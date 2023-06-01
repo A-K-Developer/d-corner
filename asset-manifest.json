@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/A-K-Developer/d-corner/static/css/main.755a2023.css",
+    "main.js": "/A-K-Developer/d-corner/static/js/main.d7538422.js",
+    "static/media/Unbounded-Regular.ttf": "/A-K-Developer/d-corner/static/media/Unbounded-Regular.9911f49e309a849577b2.ttf",
+    "static/media/NeueMontrealRegular400.otf": "/A-K-Developer/d-corner/static/media/NeueMontrealRegular400.140bfb4a71fe08805d92.otf",
+    "index.html": "/A-K-Developer/d-corner/index.html",
+    "main.755a2023.css.map": "/A-K-Developer/d-corner/static/css/main.755a2023.css.map",
+    "main.d7538422.js.map": "/A-K-Developer/d-corner/static/js/main.d7538422.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.755a2023.css",
+    "static/js/main.d7538422.js"
+  ]
+}
