@@ -1,6 +1,6 @@
 import { Stack } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { whiteLogo } from '../utils/constants';
 import './style.css'
 
@@ -8,12 +8,14 @@ import './style.css'
 const Navbar = () => {
   const location = useLocation();
 
-
   const isActive = (path) => {
+    console.log(path);
+    
+
 
     return location.pathname === path || location.pathname === '/Contact';
   };
-
+ 
   const openBurgerMenu = () => {
     let burgerBtn = document.querySelector('.burgerContainer');
     let menuContainer = document.querySelector('.burgerNavContainer');
@@ -42,7 +44,25 @@ const Navbar = () => {
       }
     }
   }
+  const [color,setColor]= useState('#000');
+
   useEffect(() => {
+
+    let navLinks = document.querySelectorAll('.LinkNav');
+
+    let manipulPath = location.pathname.slice(0,8);
+    if(manipulPath === '/Project' || location.pathname === '/Work' || location.pathname === '/Service'){
+      setColor('#000')
+
+    }else{
+      setColor('#fff')
+    }
+    
+    navLinks.forEach(x => {
+      console.log(color);
+      x.style.color = color;
+    })
+
     const checkURL = () => {
       const isWorkPage = window.location.pathname.includes('Work');
       const logoLink = document.getElementById('logo-link');
@@ -103,28 +123,28 @@ const Navbar = () => {
         <Stack className='LinksNav' direction='row'>
           <Link
             to="/Work"
-            style={{ display: "flex", alignItems: "center", color: isActive('/Work') ? '#000' : '#fff' }}
+            style={{ display: "flex", alignItems: "center", }}
             className="LinkNav"
           >
             Work
           </Link>
           <Link
             to="/Service"
-            style={{ display: "flex", alignItems: "center", color: isActive('/Work') ? '#000' : '#fff' }}
+            style={{ display: "flex", alignItems: "center", }}
             className="LinkNav"
           >
             Services
           </Link>
           <Link
             to="/About-Us"
-            style={{ display: "flex", alignItems: "center", color: isActive('/Work') ? '#000' : '#fff' }}
+            style={{ display: "flex", alignItems: "center",  }}
             className="LinkNav"
           >
             About us
           </Link>
           <Link
             to="/Contact"
-            style={{ display: "flex", alignItems: "center", color: isActive('/Work') ? '#000' : '#fff' }}
+            style={{ display: "flex", alignItems: "center",  }}
             className="LinkNav"
           >
             Contact

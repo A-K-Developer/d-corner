@@ -1,8 +1,8 @@
 import React  from 'react'
 
-import { Link, useNavigate, useLocation } from "react-router-dom"
-import { galleryImg, logo, projects  } from "../utils/constants"
-import { useState, useEffect,useRef } from 'react';
+import { Link } from "react-router-dom"
+import { galleryImg   } from "../utils/constants"
+import { useEffect,useRef } from 'react';
 import { ProjectGallery } from '../components/index'
 import './css/WorkPage.css'
 

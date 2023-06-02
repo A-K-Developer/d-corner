@@ -1,9 +1,11 @@
 .projectsThemeContainer {
     height: 20vh;
-    height: 20vh;
     display: flex;
     justify-content: center;
     margin-top: 20%;
+}
+.btnsForWEb{
+    display: none;
 }
 
 .projectsThemeContainer h1 {
@@ -233,4 +235,236 @@ img {
 .projectNext{
     width: 40%;
     margin: auto;
+}
+@media (min-width: 768px) {
+    .projectsThemeContainer {
+        margin-top: 10em;
+    }
+    
+    .projectsThemeContainer h1 {
+        font-size: var(--headingSize);
+    
+    }
+    
+    .aboutTheProject {
+        width: 90%;
+        margin: auto;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        position: relative;
+    }
+    
+    .boxContainer {
+        width: 45vw;
+        height: 7em;
+        
+    
+    }
+    
+    .square {
+        width: 50%;
+        position: absolute;
+        height: 80%;
+        top: 0;
+        left: 0;
+        background-color: var(--colorPrimery);
+        z-index: -2;
+    
+    }
+    
+    .boxContainer h1 {
+        font-weight: 400;
+        font-size: var(--MobileHeading);
+        line-height: 25px;
+        font-family: var(--fontHeading);
+        z-index: 30;
+        position: absolute;
+        top: 1em;
+        left: 2.5em;
+    }
+    
+    .outsideSquare {
+        width: 80px;
+        height: 80px;
+        border-left: 2px solid black;
+        border-top: 2px solid black;
+        position: absolute;
+        top: 1em;
+        left: 2em;
+    }
+    
+    .descriptionInProject {
+        width: 85%;
+        margin-left: 15%;
+        word-wrap: break-word;
+    
+    }
+    
+    .smallGallery {
+        width: 100%;
+        height: 80vh;
+        position: relative;
+    
+        
+    
+    
+    }
+    
+    .smallGallery img:nth-child(1) {
+        width: 20%;
+    
+        height: auto;
+        position: absolute;
+        top: 1em;
+        margin: 0 40%;
+    }
+    
+    .smallGallery img:nth-child(2) {
+        width: 25%;
+    
+        position: absolute;
+        top: 2em;
+        margin: 0 50% 0 25%;
+    }
+    
+    .smallGallery img:nth-child(3) {
+        width: 30%;
+    
+        position: absolute;
+        top: 3em;
+        left: 40%;
+    }
+    
+    .scrolled img:nth-child(1) {
+        width: 35%;
+        top: 10%;
+        left: 5%;
+        transition: top 2s ease-in-out, left 2s ease-in-out;
+        margin: 0;
+    }
+    .scrolled img:nth-child(2) {
+        width: 40%;
+        top: 10%;
+        left: 45%;
+        transition: top 2s ease-in-out, left 2s ease-in-out;
+        margin: 0;
+    }
+    .scrolled img:nth-child(3) {
+        width: 45%;
+        top: 70%;
+        left: 15%;
+        transition: top 2s ease-in-out, left 2s ease-in-out;
+        margin: 0;
+    }
+    
+    .bigGalleryContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    
+    .bigGalleryContainer h1 {
+        font-family: var(--fontHeading);
+        font-style: normal;
+        font-weight: 400;
+        font-size: var(--MobileHeading);
+        line-height: 25px;
+        margin-left: 2em;
+    }
+    
+    .gallery img {
+        width: 100%;
+    }
+    
+    .circleContainer {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
+    }
+    
+    .circle {
+        width: 10px;
+        height: 10px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+    }
+    
+    .circleFill {
+        width: 8px;
+        height: 8px;
+        background-color: white;
+        border-radius: 50px;
+    
+    }
+    
+    .fill {
+        background-color: black;
+    }
+    
+    .rightBtn {
+        width: 50%;
+        max-height: 100%;
+        background-color: transparent;
+        z-index: 11;
+    }
+    
+    .leftBtn {
+        width: 50%;
+        max-height: 100%;
+        background-color: transparent;
+        z-index: 11;
+    }
+    .btnsForWEb{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5em;
+        padding: 2em;
+    }
+    
+    img {
+        width: 100%;
+    }
+    .gallery{
+        position: relative;
+    }
+    .btnsForGallery{
+        display: flex;
+        gap: 20%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0.6em;
+    }
+    .btnsForGallery div{
+        width: 40%;
+        height:100% ;
+        z-index: 101;
+    
+    }
+    
+    .containerForProjects{
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+        width: 100%;
+    }
+    .projectNext{
+        width: 40%;
+        margin: auto;
+    }
+    
+
 }

@@ -8,6 +8,20 @@ import './components/style.css';
 //username : lavi0200@edu.zealand.dk
 // password : designdevelopmentcorner
 
+
+
+/*
+
+
+Things to change before Hand in 
+
+    1---Social Icons in Footer 
+    2---Social Icons /Contact Page 
+    3--validate code
+    4-Build folder 
+    5- fix servivr page 
+    */
+
 function App() {
   return (
     <BrowserRouter>

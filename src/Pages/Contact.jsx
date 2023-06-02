@@ -9,7 +9,7 @@ import {lastPictures} from '../utils/constants';
                 <img className='header-Img' src={lastPictures.contactPage} alt="contactPAge error" />
                 <div className="heading">
                     <h3>Let's get in touch!</h3>
-                    <p>A to-the-point tagline that really draws in the user</p>
+                    <p>Our team of branding experts is here to help you unlock the full potential of your brand.</p>
                 </div>
                 <div className="contactInfo">
                     <div className="infoContent">

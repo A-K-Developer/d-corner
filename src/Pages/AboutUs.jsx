@@ -1,7 +1,8 @@
 
 import './css/aboutUs.css';
 import { useState, useRef } from "react";
-import {textChangingMission }from '../utils/constants'
+import {textChangingMission, lastPictures }from '../utils/constants'
+import { ButtonComp } from '../components';
 
 
 
@@ -27,8 +28,11 @@ const AboutUs = () => {
                     <h1>Our story</h1>
                     <p>All famous and successful worldwide brands have a compelling and unique story of how they were created. </p>
                     </div>
+                    <img className='teamPic' src={lastPictures.aboutPage} alt="Our Pic miss" />
+                    <div className="opacityHeaderAbout"></div>
                 </div>
                 <div className="storyBehaid">
+                    <div className="colorBackground"></div>
                     <h1>The story behind D&D Corner</h1>
                     <p>Our business idea bloomed in a small dorm room, outside beautiful Copenhagen.
                         Being in our final year of studies in the Multimedia Design course, we, three international students were dreaming of starting something on our own. Something that would join our passions, knowledge, and skills into a dream job, benefiting our society too.</p>
@@ -40,10 +44,8 @@ const AboutUs = () => {
                         It became a special day that meant so much in the creation of our brand identity and values. Specifically, it helped to set our values of creativity, diversity, and transparency. Each of them describes the agency's approach towards clients, performed jobs, and business environment.</p>
                     <p>
                         Today, the story of our brand creation is not just the history of the painted wall. This is the motivation for our agency to go confidently towards our mission and evolve with each client.</p>
-                    <div className="btn storyBehaindBtn">
-                        <p>See less</p>
-                        <p>Arrow</p>
-                    </div>
+                 
+                    <ButtonComp type ='storyBehaindBtn' />
                 </div>
                 <div className="whiteBackground">
                     <div className="purpleSquare"></div>
@@ -59,17 +61,17 @@ const AboutUs = () => {
                 </div>
                 <div className='personas'>
                         <div className="persona">
-                            <img src="" alt="" />
+                            <img src={lastPictures.laviniaPic} alt="Lavinia is missing" />
                             <h1 className="name">Lavinia</h1>
                             <p>UX/UI Web Designer</p>
                         </div>
                         <div className="persona">
-                        <img src="" alt="" />
+                        <img src={lastPictures.asenPicture} alt="Asen Missing nobody care" />
                             <h1 className="name">Asen</h1>
                             <p>Web Developer</p>
                         </div>
                         <div className="persona">
-                        <img src="" alt="" />
+                        <img src={lastPictures.iulianaPic} alt="Iulianaa misiing" />
                             <h1 className="name">Iuliana</h1>
                             <p>Graphic Designer</p>
                         </div>

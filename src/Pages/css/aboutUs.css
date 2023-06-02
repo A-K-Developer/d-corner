@@ -1,7 +1,6 @@
 .header-AboutUs {
     width: 100%;
     height: 70vh;
-    background-color: gray;
 
     padding-top: 0.1em;
     display: flex;
@@ -10,7 +9,42 @@
     align-items: center;
     position: relative;
 }
-
+.opacityTextContainer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.4;
+    background-color: #fff;
+}
+.teamPic{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+.aboutTextContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    color: var(--whiteCol);
+    padding: 2em;
+    position: absolute;
+    bottom: 5%;
+    z-index: 122;
+}
+.opacityHeaderAbout{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    background-color: #000;
+    opacity: 0.4;
+}
 .header-AboutUs h1:nth-child(1) {
     line-height: 24.8px;
 }
@@ -27,9 +61,22 @@
     display: flex;
     flex-direction: column;
     margin: 2em;
+    position: relative;
+
 
 }
+.colorBackground{
+    position: absolute;
+    top:-10% ;
+    left: -10%;
+    width: 120%;
+    height: 100%;
+    transform: rotate(180deg);
+    z-index: -1;
 
+    background: linear-gradient(340.94deg, #E4D9EA 16.48%, rgba(255, 255, 255, 0) 77.32%);
+
+}
 .storyBehaid h1 {
     width: 60%;
     line-height: 24.8px;
@@ -89,6 +136,7 @@
     justify-content: justify;
     align-items: flex-start;
     margin: auto;
+    margin: 3em;
 }
 
 .lastHeadingWork h1 {
@@ -100,6 +148,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 5em;
+    margin-bottom: 5em;
+}
+.persona{
+    width: 70%;
+
 }
 @media (min-width: 768px) {
     .header-AboutUs {
@@ -149,10 +203,11 @@
     .storyBehaid {
         display: flex;
         flex-direction: column;
-        width: 30%;
-        margin: 5em auto;
+        width: 100%;
+        padding: 5em 30%;
         justify-content: center;
         align-items: center;
+        
     
     }
     
@@ -210,21 +265,26 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap:1em
+        gap:5em;
+        margin: 5em auto;
     }
     .persona{
-        width: 35%;
-        height: 350px;
+        width: 30%;
+        height: 450px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 1em;
-        background-color: gray;
+        background-color: lightgray;
+        position: relative;
     }
     .persona img{
         width: 70%;
+        object-fit: cover;
         height: 250px;
+        position: relative;
+        top: 1em;
         
     }
     

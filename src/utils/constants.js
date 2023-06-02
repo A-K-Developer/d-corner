@@ -9,6 +9,10 @@ export const logoDark = 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.
 
 
 export const lastPictures = {
+    asenPicture: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/asen-short.jpg?alt=media&token=7264d0c1-cf98-419f-9480-fe87ca00d243',
+    laviniaPic : 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/lavinia-short.jpg?alt=media&token=2f2c2cb2-0607-4561-bbdb-4ad75aba9f7c',
+    iulianaPic : 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/iuliana-short.jpg?alt=media&token=9c6e4625-0818-4186-abcd-a3eed2d89b28',
+    aboutPage: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/IMG_5543_(2).jpg?alt=media&token=1dbf682b-1600-4397-b88f-703f3dbbd302',
     contactPage : 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/contactBackground.jpg?alt=media&token=397aecc6-93aa-4f4e-acfe-3cce6540aedf',
     servicePage: 'https://firebasestorage.googleapis.com/v0/b/d-d-corner.appspot.com/o/servicePage.jpg?alt=media&token=88b62a9d-fc9d-47ef-88e8-79cfcb87f866',
 }
@@ -28,7 +32,8 @@ export const buttons = {
     checkOut: 'Check out our services',
     getToKnow: 'Get to know us',
     explore: 'Explore our portfolio',
-
+    contact: 'Submit',
+    aboutUs: 'See less',
 
 }
 

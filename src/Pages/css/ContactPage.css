@@ -106,11 +106,28 @@
 .formInfo form input{
     padding: 0.5em 1em;
     font-size: 14px;
+    background-color: lightgray;
+    border-style: none;
+    color: #000;
+    
+
+
+}
+.formInfo form input::placeholder{
+    color: #000;
+
+}
+.formInfo form textarea::placeholder{
+    color: #000;
 }
 .formInfo form textarea {
     height:10em;
     padding: 0.5em 1em;
     font-size: 14px;
+    background-color: lightgray;
+    border-style: none;
+    color: #000;
+
 
 }
 .contactBtn{
@@ -206,20 +223,13 @@
 
 }
 .formInfo form div{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
     gap: 1em;
 }
 .formInfo form div input{
-    background-color: lightgray;
     padding: 1em;
-    border-style: none;
 }
 .formInfo form div textarea{
-    background-color: lightgray;
     padding: 1em;
-    border-style: none;
 }
 .contactBtn{
     width: 40%;

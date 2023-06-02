@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { AiOutlineDoubleRight } from 'react-icons/ai';
 import { Link, } from 'react-router-dom';
 import {buttons} from '../utils/constants';
@@ -22,6 +22,16 @@ const ButtonComp = (props) => {
     specClass = 'btn gallery-btn';
     specTo = '/Work'
     text = buttons.explore;
+  }else
+  if(props.type === 'Contact'){
+    specClass = 'btn contactBtn';
+    specTo = '';
+    text = buttons.contact;
+  }else
+  if(props.type === 'storyBehaindBtn'){
+    specClass = 'btn storyBehaindBtn';
+    specTo = '';
+    text = buttons.aboutUs;
   }
   return (
     <Link className={specClass} to={specTo}>

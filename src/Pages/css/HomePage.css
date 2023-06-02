@@ -18,6 +18,18 @@
     background-color: var(--colorBackground);
     border-bottom: 0.1em solid var(--blackCol);
 }
+.bannerHomePage{
+    position: relative;
+}
+.opacityBanner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.2;
+}
 
 .welcome-text-container {
     position: absolute;
@@ -153,6 +165,7 @@
     position: relative;
     top: 0.em;
     left: -1em;
+    
 }
 
 .services {
@@ -263,7 +276,7 @@
     flex-wrap: wrap;
     gap: 1em;
     justify-content: center;
-    height: 200vh;
+    height: 100vh;
    
 }
 
@@ -467,12 +480,22 @@
     }
 
     .skillLine {
-        width: 100%;
+        width: 0%;
         height: 0.5em;
         position: relative;
         top: 7em;
         left: 0.4em;
+        animation: skillLineWeb 2s ease;
     }
+    @keyframes skillLineWeb {
+        0% {
+          width: 0%;
+        }
+      
+        100% {
+          width: 100%;
+        }
+      }
 
     .services {
         height: 250vh

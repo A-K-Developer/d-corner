@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {ButtonComp } from '../components/index'
 
 const FormContact = () => {
   const [formData, setFormData] = useState({
@@ -101,7 +102,7 @@ const FormContact = () => {
             onChange={handleChange}
           ></textarea>
         </div>
-        <button className='btn contactBtn' type="submit">Submit</button>
+        <ButtonComp type='Contact' />
       </form>
     </div>
   );

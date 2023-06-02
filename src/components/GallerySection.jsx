@@ -1,16 +1,16 @@
-//import { useNavigate, useLocation } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { projects } from "../utils/constants"
 
 
 const ProjectGallery = () => {
-    //const navigate = useNavigate();
+    const navigate = useNavigate();
     //let location = useLocation();
 
     //console.log(location);
     let RedirectToProject = (e) => {
     
         let curr = e.currentTarget.firstElementChild.nextSibling.textContent;
-       // navigate(`/Project/${curr}`,{replace: true});
+        navigate(`/Project/${curr}`,{replace: true});
      
      }
 
